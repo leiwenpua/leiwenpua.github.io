@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project NbDEK | Pua Lei Wen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .tech-tag {
+            background: rgba(30, 58, 138, 0.1);
+            color: #1e3a8a;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="protfolio.html" class="font-bold text-xl tracking-tight text-blue-900">← Back to Portfolio</a>
+            <div class="space-x-4">
+                <a href="https://drive.google.com/file/d/1UCozc_SRJMF1LqQCAZpghhVyw5FK-3mZ/view?usp=sharing" class="text-slate-600 hover:text-blue-900 font-medium">Documentation</a>
+            </div>
+        </div>
+    </nav>
+	
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header Section -->
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">NbDEK Structural Analysis</h1>
+                <div class="flex flex-wrap gap-2 mb-6">
+					<span class="tech-tag">Homology Modelling</span>
+					<span class="tech-tag">Molecular Docking</span>
+					<span class="tech-tag">Protein Structure Validation</span>
+					<span class="tech-tag">Physicochemical Characterization</span>
+                </div>
+            </header>
+            <!-- Grid Layout for Content -->
+            <div class="grid grid-cols-1 gap-12">
+                
+				<!-- Background & Objective -->
+				<section>
+					<h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center">
+						<span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+						Project Background
+					</h2>
+					<div class="space-y-4">
+						<p class="text-slate-700 leading-relaxed text-lg">
+							This study was my <strong>Bachelor's Final Year Project</strong>, focusing on the <em>in-silico</em> characterization of <strong>NbDEK</strong>, a calpain-type cysteine protease from <em>Nicotiana benthamiana</em>. 
+						</p>
+						
+						<p class="text-slate-700 leading-relaxed text-lg">
+							At the time, the 3D structure of NbDEK was uncharacterized, creating a significant gap in understanding its biological function and calcium-binding mechanisms. To bridge this, the project utilized a Sequence-to-Structure workflow: predicting a high-quality tertiary structure via Homology Modelling, comparing it against known orthologs, and evaluating its binding affinity with the E-64 protease inhibitor using AutoDock Vina.
+						</p>
+					</div>
+				</section>
+				
+				<!-- Overall Strategy & Logic -->
+				<section class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 mt-12">
+					<h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+						<span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+						Overall Strategy & Logic
+					</h2>
+
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+						<!-- Connecting Line (Desktop Only) -->
+						<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2 z-0"></div>
+
+						<!-- Step 1: Sequence Characterization -->
+						<div class="relative z-10 bg-white">
+							<div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mb-6 shadow-lg shadow-blue-200">1</div>
+							<h3 class="text-lg font-bold text-slate-900 mb-3">In-silico Profiling</h3>
+							<p class="text-slate-600 text-sm leading-relaxed">
+								Starting from the <strong>Primary Sequence (Q6SSJ2)</strong>, physicochemical analysis (ProtParam) and secondary structure predictions (JPred/GOR IV) were conducted to assess protein stability and intrinsic folding tendencies prior to 3D modelling.
+							</p>
+						</div>
+
+						<!-- Step 2: Structural Reconstruction -->
+						<div class="relative z-10 bg-white">
+							<div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mb-6 shadow-lg shadow-blue-200">2</div>
+							<h3 class="text-lg font-bold text-slate-900 mb-3">Tertiary Modelling</h3>
+							<p class="text-slate-600 text-sm leading-relaxed">
+								<strong>Homology Modelling (SWISS-MODEL)</strong> was employed to generate the 3D coordinates, followed by a rigorous stereochemical audit via SAVES v6.0 and MolProbity to ensure backbone geometry adhered to biological constraints.
+							</p>
+						</div>
+
+						<!-- Step 3: Functional Interaction -->
+						<div class="relative z-10 bg-white">
+							<div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mb-6 shadow-lg shadow-blue-200">3</div>
+							<h3 class="text-lg font-bold text-slate-900 mb-3">Molecular Docking</h3>
+							<p class="text-slate-600 text-sm leading-relaxed">
+								The final phase involved simulating <strong>Receptor-Ligand interactions</strong>. Utilizing AutoDock Vina the E-64 inhibitor was docked into the predicted active site to determine binding affinities and visualize residue-level interactions.
+							</p>
+						</div>
+					</div>
+				</section>
+				
+				<!-- Future Directions -->
+				<section class="mt-16 pb-20">
+					<h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+						<span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+						Future Directions & Scalability
+					</h2>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<!-- Molecular Dynamics Simulation -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Molecular Dynamics (MD)</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Transitioning from static docking to <strong>Dynamic Simulation</strong> using GROMACS or AMBER. This would allow for the observation of the NbDEK-E64 complex in a solvated environment, capturing <strong>conformational fluctuations</strong> and binding stability over time.
+							</p>
+						</div>
+
+						<!-- AI-Driven Structure Prediction -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04 Pelletier7.331C11.481 1.71 12.866 3 14.318 3c1.451 0 2.836-1.29 4.318-3z"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Next-Gen AI Integration</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Leveraging <strong>AlphaFold 3</strong> for end-to-end structure prediction and multimer modeling. Integrating deep learning scores would provide higher confidence in active site localization compared to traditional homology methods.
+							</p>
+						</div>
+
+				</section>
+				
+				<!-- Links Section -->
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <!-- Google Drive Link -->
+                    <a href="https://drive.google.com/file/d/1UCozc_SRJMF1LqQCAZpghhVyw5FK-3mZ/view?usp=drive_link" id="drive" target="_blank" 
+                       class="group p-6 bg-blue-50 border-2 border-blue-100 rounded-2xl hover:border-blue-300 transition-all flex flex-col justify-between h-40">
+                        <div class="flex justify-between items-start">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span class="group-hover:translate-x-1 transition-transform text-blue-600">→</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-blue-900">Project Documentation</h3>
+                            <p class="text-slate-500 text-sm">View reports and resources on Drive</p>
+                        </div>
+                    </a>
+                </section>
+
+				
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 text-center text-slate-500 text-sm">
+            © 2026 Pua Lei Wen. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

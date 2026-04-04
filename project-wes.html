@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project WES | Pua Lei Wen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .tech-tag {
+            background: rgba(30, 58, 138, 0.1);
+            color: #1e3a8a;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="protfolio.html" class="font-bold text-xl tracking-tight text-blue-900">← Back to Portfolio</a>
+            <div class="space-x-4">
+                <a href="https://github.com/leiwenpua/asaswes" class="text-slate-600 hover:text-blue-900 font-medium">SourceCode</a>
+                <a href="https://drive.google.com/file/d/1WvigD-D01cxjBiMBoHE8BtA07qnxwSZL/view?usp=sharing" class="text-slate-600 hover:text-blue-900 font-medium">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header Section -->
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">WES Assembly System</h1>
+                <div class="flex flex-wrap gap-2 mb-6">
+					<span class="tech-tag">Python</span>
+					<span class="tech-tag">BWA-MEM</span>
+					<span class="tech-tag">GATK</span>
+					<span class="tech-tag">Tkinter</span>
+					<span class="tech-tag">Bash</span>
+                </div>
+            </header>
+
+            <!-- Grid Layout for Content -->
+            <div class="grid grid-cols-1 gap-12">
+                
+				<!-- Background & Objective -->
+                <section>
+                    <h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center">
+                        <span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+                        Project Background
+                    </h2>
+                    <div class="space-y-4">
+                        <p class="text-slate-700 leading-relaxed text-lg">
+                            Developed as my <strong class="text-slate-900 font-semibold">Master’s Final Year Project</strong>, ASASWES was created to address a critical bottleneck in the laboratory's handling of massive Whole Exome Sequencing (WES) datasets for the MyGenom project. 
+                        </p>
+                        
+                        <p class="text-slate-700 leading-relaxed text-lg border-l-4 border-blue-100 pl-4 italic">
+                            "The primary goal was to liberate researchers from the terminal."
+                        </p>
+
+                        <p class="text-slate-700 leading-relaxed text-lg">
+                            Previously, the workflow required manual command-line execution and constant monitoring, tethering experts to their computers for hours. ASASWES transforms this fragmented process into an end-to-end, automated pipeline. By replacing labor-intensive manual tasks with a modular framework and a real-time monitoring GUI, the system enables users to trigger a run and focus on high-value biological interpretation instead of process management.
+                        </p>
+                    </div>
+                </section>
+
+				<!-- Overall Strategy & Logic -->
+				<section class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+					<h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+						<span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+						Overall Strategy & Logic
+					</h2>
+
+					<div class="space-y-12">
+						<!-- Core Integration Strategy -->
+						<div>
+							<h3 class="text-xl font-bold text-slate-800 mb-4 italic">The "Central Hub" Architecture</h3>
+							<p class="text-slate-600 leading-relaxed mb-6">
+								The system utilizes <strong class="text-blue-900">Python 3.11</strong> as the primary orchestration engine. Through a modular design, it integrates complex bioinformatics tools into a unified, automated framework. The core logic focuses on seamless data flow transitions and environment consistency.
+							</p>
+							
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<!-- How it connects -->
+								<div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+									<h4 class="font-bold text-blue-900 mb-4 flex items-center">
+										<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+										Integration Mechanism
+									</h4>
+									<ul class="text-sm text-slate-600 space-y-3">
+										<li>• <strong>Subprocess Pipe:</strong> Directly invokes low-level Linux binaries (BWA, GATK, Samtools) via Python's subprocess module.</li>
+										<li>• <strong>Dynamic CLI Generation:</strong> Parses GUI-captured parameters to dynamically construct command-line strings that strictly adhere to bioinformatics tool syntax.</li>
+										<li>• <strong>Asynchronous Threading:</strong> Implements multi-threading to decouple heavy computational tasks from the main loop, ensuring the GUI remains responsive and lag-free during long-running processes.</li>
+									</ul>
+								</div>
+
+								<!-- Key Functions -->
+								<div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+									<h4 class="font-bold text-blue-900 mb-4 flex items-center">
+										<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04 Pelm0-4.016 11.955 11.955 0 01-3.898 8.96c1.681 1.94 3.708 3.466 5.936 4.444 2.228-.978 4.255-2.504 5.936-4.444a11.954 11.954 0 01-3.898-8.96z"></path></svg>
+										Key Functional Modules
+									</h4>
+									<ul class="text-sm text-slate-600 space-y-3">
+										<li>• <strong>Automated IO Handling:</strong> Manages the complete lifecycle of data transformation (FASTQ → BAM → VCF) including intermediate file cleanup and directory structuring.</li>
+										<li>• <strong>Real-time Progress Tracking:</strong> Intercepts and parses Standard Output (Stdout) from active tools to visualize real-time progress via GUI progress bars.</li>
+										<li>• <strong>Standardized Error Logging:</strong> Features automated exception catching and detailed log generation, essential for debugging large-scale datasets (2GB+).</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Workflow Logic Table -->
+						<div>
+							<h3 class="text-lg font-bold text-slate-800 mb-4">Pipeline Execution Logic</h3>
+							<div class="overflow-x-auto rounded-xl border border-slate-100">
+								<table class="w-full text-left border-collapse bg-white">
+									<thead>
+										<tr class="bg-slate-50 border-b border-slate-200">
+											<th class="py-4 px-6 text-blue-900 font-bold uppercase text-xs tracking-wider">Stage</th>
+											<th class="py-4 px-6 text-blue-900 font-bold uppercase text-xs tracking-wider">Key Tools</th>
+											<th class="py-4 px-6 text-blue-900 font-bold uppercase text-xs tracking-wider">Logical Objective</th>
+										</tr>
+									</thead>
+									<tbody class="text-sm text-slate-600 divide-y divide-slate-100">
+										<tr>
+											<td class="py-4 px-6 font-semibold text-slate-900">Pre-alignment</td>
+											<td class="py-4 px-6 italic text-blue-700">FastQC, Picard (FastqToSam)</td>
+											<td class="py-4 px-6">Quality control of raw reads, adapter trimming, and conversion to unmapped BAM (uBAM) format.</td>
+										</tr>
+										<tr>
+											<td class="py-4 px-6 font-semibold text-slate-900">Alignment</td>
+											<td class="py-4 px-6 italic text-blue-700">BWA-MEM, Samtools</td>
+											<td class="py-4 px-6">Efficient mapping to the GRCh38 human reference genome and FAI indexing for rapid retrieval.</td>
+										</tr>
+										<tr>
+											<td class="py-4 px-6 font-semibold text-slate-900">Refinement</td>
+											<td class="py-4 px-6 italic text-blue-700">Picard (MarkDuplicates), GATK (BQSR)</td>
+											<td class="py-4 px-6">Identification of PCR duplicates and Base Quality Score Recalibration to minimize systematic errors.</td>
+										</tr>
+										<tr>
+											<td class="py-4 px-6 font-semibold text-slate-900">Variant Calling</td>
+											<td class="py-4 px-6 italic text-blue-700">GATK (HaplotypeCaller), ANNOVAR</td>
+											<td class="py-4 px-6">Germline variant detection and functional annotation (converting coordinates to biological/clinical significance).</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Future Directions -->
+				<section class="mt-16 pb-20">
+					<h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+						<span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+						Future Directions & Scalability
+					</h2>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<!-- Dockerization -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Containerization (Docker)</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Transitioning the pipeline into a Docker image to eliminate "dependency hell." This ensures the complex mix of Java, Python, and C++ tools runs identically across any OS with zero manual configuration.
+							</p>
+						</div>
+
+						<!-- Modular Architecture -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Modular Refactoring</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Refactoring the current script architecture into a structured package. By decoupling configuration, UI logic, and core bioinformatics modules, the system will become more maintainable and unit-testable.
+							</p>
+						</div>
+
+						<!-- Cloud Integration -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Cloud-Native Transition</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Moving towards a cloud-based execution model (e.g., AWS Batch or Nextflow Tower integration). This would allow the lab to scale from processing single samples to hundreds of genomes simultaneously using elastic compute.
+							</p>
+						</div>
+
+						<!-- High-Throughput Validation -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Extended Validation</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Expanding the validation phase using high-throughput benchmarks. This involves stress-testing the pipeline with diverse population datasets to further refine the Precision and Recall metrics for rare variant detection.
+							</p>
+						</div>
+						<!-- Automated Decision Logic -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-rose-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Intelligent Decision Logic</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Implementing automated "Quality Gates" between pipeline stages. The system will programmatically evaluate FastQC metrics and cross-check data integrity; if quality thresholds are not met, the pipeline will auto-terminate or trigger specific re-processing parameters to save computational costs.
+							</p>
+						</div>
+
+						<!-- Dynamic Resource Allocation -->
+						<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+							<div class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-cyan-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+							</div>
+							<h3 class="font-bold text-slate-800 mb-2">Dynamic Resource Heuristics</h3>
+							<p class="text-sm text-slate-600 leading-relaxed">
+								Integrating hardware-aware logic that analyzes input FASTQ file sizes to automatically calculate the optimal threads and memory allocation. This prevents "Out of Memory" (OOM) errors and ensures the most efficient use of Ubuntu's system resources.
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Links Section -->
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/leiwenpua/asaswes" id="github" target="_blank" 
+                       class="group p-6 bg-slate-900 text-white rounded-2xl hover:bg-slate-800 transition-all flex flex-col justify-between h-40">
+                        <div class="flex justify-between items-start">
+                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Source Code</h3>
+                            <p class="text-slate-400 text-sm">Explore the repository on GitHub</p>
+                        </div>
+                    </a>
+
+                    <!-- Google Drive Link -->
+                    <a href="https://drive.google.com/file/d/1WvigD-D01cxjBiMBoHE8BtA07qnxwSZL/view?usp=sharing" id="drive" target="_blank" 
+                       class="group p-6 bg-blue-50 border-2 border-blue-100 rounded-2xl hover:border-blue-300 transition-all flex flex-col justify-between h-40">
+                        <div class="flex justify-between items-start">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span class="group-hover:translate-x-1 transition-transform text-blue-600">→</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-blue-900">Project Documentation</h3>
+                            <p class="text-slate-500 text-sm">View reports and resources on Drive</p>
+                        </div>
+                    </a>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 text-center text-slate-500 text-sm">
+            © 2026 Pua Lei Wen. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

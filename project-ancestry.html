@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Ancestry | Pua Lei Wen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .tech-tag {
+            background: rgba(30, 58, 138, 0.1);
+            color: #1e3a8a;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="protfolio.html" class="font-bold text-xl tracking-tight text-blue-900">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header Section -->
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Population Ancestry Analysis</h1>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Custom MLE Algorithm</span>
+                    <span class="tech-tag">Genomic Data Science</span>
+					<span class="tech-tag">ReportLab</span>
+                </div>
+            </header>
+
+            <!-- Background & Objective -->
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
+                    <span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+                    Project Background
+                </h2>
+                <div class="space-y-6">
+                    <p class="text-slate-700 leading-relaxed text-lg">
+                        Developed a specialized ancestry inference pipeline tailored to the complex genetic landscape of Southeast Asia (SEA). Working alongside genomic consultants, I <strong class="text-slate-900">independently implemented</strong> the end-to-end analytical framework. This involved engineering the full data lifecycle: from the initial parsing and QC of <strong class="text-slate-900">Microarray-derived genotype data</strong>, to executing custom ancestry scoring and building an automated visualization reporting engine.
+                    </p>
+
+                    <div class="bg-amber-50/50 p-4 rounded-xl border-l-4 border-amber-200">
+                        <p class="text-slate-600 leading-snug text-sm">
+                            <strong class="text-amber-900 font-bold uppercase text-[10px] tracking-widest block mb-1">Current Status: Pilot & Refinement</strong>
+                            Initial development is complete and has moved into the <strong>Pilot Phase</strong>. Internal testing identified the need for higher reference panel density for specific sub-ethnic groups. To ensure clinical-grade precision, the project is currently in <strong>strategic recalibration</strong> to expand the underlying genomic reference database.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+			<!-- Overall Strategy & Logic -->
+			<section class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+				<h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+					<span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+					Overall Strategy & Logic
+				</h2>
+
+				<div class="relative max-w-4xl">
+					<!-- Vertical Line (Decoration) -->
+					<div class="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-100"></div>
+
+					<div class="space-y-12 relative">
+						
+						<!-- Step 1: Preprocessing -->
+						<div class="flex items-start">
+							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm z-10">1</div>
+							<div class="ml-6">
+								<h4 class="text-xl font-bold text-slate-800">Precision Microarray Preprocessing</h4>
+								<p class="text-slate-600 mt-2 leading-relaxed">
+									Engineered a robust ingestion pipeline to handle the inherent noise of raw microarray data. 
+									To ensure data integrity, conflict resolution logic was implemented to filter multi-probe variants at identical loci. 
+									As raw inputs frequently lacked standardized identifiers, functional annotation was performed via coordinate liftover (GRCh37 to GRCh38) to accurately assign <strong>rsID markers</strong>, enabling seamless alignment with public AIMs datasets and conversion into standard VCF/PLINK formats.
+								</p>
+							</div>
+						</div>
+
+						<!-- Step 2: Custom Algorithm -->
+						<div class="flex items-start">
+							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm z-10">2</div>
+							<div class="ml-6">
+								<h4 class="text-xl font-bold text-slate-800">Proprietary Analytical Engine</h4>
+								<p class="text-slate-600 mt-2 leading-relaxed">
+									Instead of relying on generic open-source tools such as <em>ADMIXTURE</em>, a <strong>custom Maximum Log-Likelihood (MLE) framework</strong> was developed. 
+									This approach enabled full control over the mathematical model, allowing for <strong class="text-blue-900">custom normalization and penalty functions</strong> tailored to Southeast Asian sub-populations. 
+									The result is a lightweight, high-performance scoring engine that avoids third-party binary limitations and integrates seamlessly with Python-based microservices.
+								</p>
+							</div>
+						</div>
+
+						<!-- Step 3: Visualization & Reporting -->
+						<div class="flex items-start">
+							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm z-10">3</div>
+							<div class="ml-6">
+								<h4 class="text-xl font-bold text-slate-800">Automated Visualization & Delivery</h4>
+								<p class="text-slate-600 mt-2 leading-relaxed">
+									Built an integrated reporting system that automates the transition from raw probability scores to consumer-friendly insights. 
+									The engine programmatically generates <strong class="text-blue-900">dynamic visualizations</strong>, including ancestral composition donut charts and regional density maps, and finalizes the workflow with the generation of professional, data-rich PDF reports for client delivery.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Key Technical Challenges -->
+			<section class="mt-20 mb-16">
+				<h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+					<span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+					Key Technical Challenges
+				</h2> 
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6"> 
+
+					<!-- Challenge 1 -->
+					<div class="bg-slate-100/50 p-8 rounded-3xl border border-slate-200">
+						<div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6">
+							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+							</svg>
+						</div>
+						<h4 class="text-lg font-bold text-slate-900 mb-3">Sub-ethnic Differentiation</h4>
+						<p class="text-slate-600 leading-relaxed text-sm">
+							Resolving high levels of admixture in Southeast Asian populations requires dense and well-curated reference data. 
+							Generic public panels (e.g., 1000 Genomes) often lack the resolution needed to distinguish closely related sub-ethnic groups, creating limitations in downstream inference accuracy.
+						</p>
+					</div>
+
+					<!-- Challenge 2 -->
+					<div class="bg-slate-100/50 p-8 rounded-3xl border border-slate-200">
+						<div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6">
+							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+							</svg>
+						</div>
+						<h4 class="text-lg font-bold text-slate-900 mb-3">Model Calibration & Accuracy</h4>
+						<p class="text-slate-600 leading-relaxed text-sm">
+							Achieving consistent and reliable ancestry estimates required systematic recalibration of the scoring model. 
+							This included refining penalty functions within the MLE framework and aligning model behavior with a higher-density proprietary reference dataset to improve stability across diverse population profiles.
+						</p>
+					</div>
+
+				</div>
+			</section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 text-center text-slate-500 text-sm">
+            © 2026 Pua Lei Wen. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

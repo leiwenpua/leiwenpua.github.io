@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Reporting | Pua Lei Wen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .tech-tag {
+            background: rgba(30, 58, 138, 0.1);
+            color: #1e3a8a;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="protfolio.html" class="font-bold text-xl tracking-tight text-blue-900">← Back to Portfolio</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header Section -->
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Automated Reporting Engine</h1>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">ETL Pipeline</span>
+                    <span class="tech-tag">Orchestration</span>
+                </div>
+            </header>
+
+            <!-- Background & Objective -->
+            <section class="mb-16">
+                <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
+                    <span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+                    Project Background
+                </h2>
+                <div class="space-y-4">
+                    <p class="text-slate-700 leading-relaxed text-lg">
+                        This project was initiated to overhaul a <strong class="text-slate-900 font-semibold">fragmented, manual reporting workflow</strong> that had become a major operational bottleneck during the high-frequency production phase.
+                    </p>
+                    
+                    <p class="text-slate-700 leading-relaxed text-lg border-l-4 border-blue-100 pl-4 italic text-blue-800">
+                        "The objective was to replace human error with algorithmic precision."
+                    </p>
+
+                    <p class="text-slate-700 leading-relaxed text-lg">
+                        Previously, the delivery process relied on a labor-intensive, multi-step manual routine: users had to manually execute SQL queries to extract client metadata, manage file transfers across local storage, and hand-pick reporting templates based on complex business logic. This approach was highly susceptible to <strong class="text-blue-900">clerical lapses</strong> and format inconsistencies.
+                    </p>
+
+                    <p class="text-slate-700 leading-relaxed text-lg">
+                        I re-engineered this process into a <strong class="text-slate-900 font-semibold">zero-touch automation framework</strong>. By integrating database indexing, heuristic business logic, and automated quality gates, the system now enables batch-triggered reporting that ensures 100% data fidelity while liberating the team from repetitive, low-value manual labor.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Overall Strategy & Logic Table -->
+            <section class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 mb-16">
+                <h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+                    <span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+                    Overall Strategy & Logic
+                </h2>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-800 italic">Workflow Transformation: Manual vs. Automated</h3>
+                    <div class="overflow-x-auto rounded-2xl border border-slate-100 shadow-sm">
+                        <table class="w-full text-left border-collapse bg-white">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200">
+                                    <th class="py-4 px-6 text-blue-900 font-bold uppercase text-xs tracking-wider w-1/4">Pipeline Stage</th>
+                                    <th class="py-4 px-6 text-slate-500 font-bold uppercase text-xs tracking-wider w-1/3 text-center">Legacy Manual Process</th>
+                                    <th class="py-4 px-6 text-green-700 font-bold uppercase text-xs tracking-wider w-1/3 text-center">Automated Orchestration</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm divide-y divide-slate-100">
+                                <tr>
+                                    <td class="py-5 px-6 font-semibold text-slate-900">Data Extraction</td>
+                                    <td class="py-5 px-6 text-slate-500">Manual SQL queries per Batch ID; prone to copy-paste errors.</td>
+                                    <td class="py-5 px-6 text-green-800 bg-green-50/30 font-medium">Automated DB Ingestion via MySQL.</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-5 px-6 font-semibold text-slate-900">Resource Routing</td>
+                                    <td class="py-5 px-6 text-slate-500">Human search and transfer across local storage directories.</td>
+                                    <td class="py-5 px-6 text-green-800 bg-green-50/30 font-medium">Dynamic Programmatic Routing.</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-5 px-6 font-semibold text-slate-900">Template Selection</td>
+                                    <td class="py-5 px-6 text-slate-500">Knowledge-based selection; susceptible to human oversight.</td>
+                                    <td class="py-5 px-6 text-green-800 bg-green-50/30 font-medium">Heuristic Logic Matching Engine.</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-5 px-6 font-semibold text-slate-900">Quality Assurance</td>
+                                    <td class="py-5 px-6 text-slate-500">Visual inspection; reactive error discovery.</td>
+                                    <td class="py-5 px-6 text-green-800 bg-green-50/30 font-medium">Automated QA Gates & Real-time Logs.</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-5 px-6 font-semibold text-slate-900">Final Delivery</td>
+                                    <td class="py-5 px-6 text-slate-500">Manual compression and DB status syncing.</td>
+                                    <td class="py-5 px-6 text-green-800 bg-green-50/30 font-medium">Integrated Lifecycle Automation.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements -->
+            <section>
+                <h2 class="text-2xl font-bold text-blue-900 mb-8 flex items-center">
+                    <span class="w-8 h-1 bg-blue-900 inline-block mr-3"></span>
+                    Key Achievements
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Time Impact -->
+                    <div class="p-6 bg-blue-50/50 rounded-2xl border border-blue-100 shadow-sm">
+                        <h4 class="font-bold text-blue-900 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            96% Faster Turnaround
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Improved reporting efficiency by reducing turnaround time from 3 days to 3 hours through workflow automation.
+                        </p>
+                    </div>
+
+                    <!-- Audit Impact -->
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-blue-900 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                            Process Traceability
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Integrated a <strong class="text-blue-900">transactional logging system</strong> recording every SQL fetch and file transfer, providing a transparent audit trail for Quality Control.
+                        </p>
+                    </div>
+
+                    <!-- Accuracy Impact -->
+                    <div class="p-6 bg-green-50/50 rounded-2xl border border-green-100 shadow-sm">
+                        <h4 class="font-bold text-blue-900 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04m-7.732 6.017A11.952 11.952 0 0012 20.056a11.952 11.952 0 008.35-8.056"></path></svg>
+                            Zero Manual Variance
+                        </h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Eliminated <strong class="text-blue-900">clerical lapses</strong> such as typos, extra spaces, or database mismatches through absolute string-level consistency in data flow.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 text-center text-slate-500 text-sm">
+            © 2026 Pua Lei Wen. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
